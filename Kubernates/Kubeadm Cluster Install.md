@@ -125,7 +125,7 @@ kubectl get nodes
 ```
 ##### Get component status
 ```
-kubectl get cs
+kubectl get componentstatus or kubectl get cs
 ```
 
 Have Fun!!
