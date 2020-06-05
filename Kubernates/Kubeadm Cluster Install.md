@@ -23,13 +23,14 @@ EOF
 ##### Install, enable and start docker service
 
 Install docker from following link
-https://kubernetes.io/docs/setup/production-environment/container-runtimes/
 
-systemctl daemon-reload
-systemctl restart docker
+        https://kubernetes.io/docs/setup/production-environment/container-runtimes/
 
-systemctl enable docker 
-systemctl start docker
+        systemctl daemon-reload
+        systemctl restart docker
+
+        systemctl enable docker 
+        systemctl start docker
 
 ##### Disable SELinux
 ```
