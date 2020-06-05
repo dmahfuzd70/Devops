@@ -78,7 +78,7 @@ yum install -y kubeadm kubelet kubectl
 systemctl enable kubelet
 systemctl start kubelet
 ```
-## On kmaster
+## On Master Node
 ##### Initialize Kubernetes Cluster
 ```
 kubeadm init --pod-network-cidr=10.244.0.0/16
@@ -113,7 +113,7 @@ kubectl create -f https://docs.projectcalico.org/v3.9/manifests/calico.yaml
 ```
 kubeadm token create --print-join-command
 ```
-## On Kworker
+## On Worker Node
 ##### Join the cluster
 Use the output from __kubeadm token create__ command in previous step from the master server and run here.
 
