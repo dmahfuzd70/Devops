@@ -115,9 +115,8 @@ kubeadm token create --print-join-command
 ```
 ## On Worker Node
 ##### Join the cluster
-Use the output from below command in worker node to join with master.
+Use the output from __kubeadm token create__ command in previous step from the master server and run here.
 
-        kubeadm token create
 
 ## Verifying the cluster
 ##### Get Nodes status
