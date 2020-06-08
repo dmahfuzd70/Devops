@@ -1,10 +1,122 @@
-Prerequisite for Docker installation:-
+Prerequisite for Docker installation:
+-------------------------------------
 
 1> OS must be 64bit (Use command uname -m to check bit)
 2> Kernel must be more then 3.10 (Use uname -r to check the kernel version)
-Documentation for docker :-
+
+Documentation for docker :
+--------------------------
 https://docs.docker.com/
-First check if any docker is preinstalled in the server by using the command “docker –
-version” or docker -v , if any docker exists then first remove all docker related instance
+
+First check if any docker is preinstalled in the server by using the command 
+    
+    “docker – version” or docker -v  
+
+if any docker exists then first remove all docker related instance
 using below command:-
-yum remove -y docker docker.io docker-engine docker-ce docker-ee
+    
+    yum remove -y docker docker.io docker-engine docker-ce docker-ee
+    
+Step 1 : switch to root user
+----------------------------
+    sudo su
+
+Step 2 : update repo list
+-------------------------
+    yum update -y
+
+Step 3 : run ip a and verify the output
+----------------------------------------
+    ip a
+    
+    output:
+    ens33: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.198.128  netmask 255.255.255.0  broadcast 192.168.198.255
+        inet6 fe80::6ef2:c323:e8a9:60f2  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:55:42:f1  txqueuelen 1000  (Ethernet)
+        RX packets 89  bytes 19970 (19.5 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 148  bytes 19002 (18.5 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+    lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 50  bytes 4220 (4.1 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 50  bytes 4220 (4.1 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+    virbr0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 192.168.122.1  netmask 255.255.255.0  broadcast 192.168.122.255
+        ether 52:54:00:9f:0c:3b  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+Step 4 : Install docker engine.
+-------------------------------
+
+a) Make sure your existing packages are up-to-date
+    
+    yum update
+
+b) Add the yum repo
+
+    vim /etc/yum.repos.d/docker.repo
+    [dockerrepo]
+    name=Docker main Repository
+    baseurl=https://yum.dockerproject.org/repo/main/centos/7
+    enabled=1
+    gpgcheck=1
+    gpgkey=https://yum.dockerproject.org/gpg
+    c) yum repolist all
+    d) Install the Docker package
+    yum install docker-engine*
+
+Note:-
+gpgcheck= GNU privacy guard, gpgcheck does the signature verification from its central database, If
+signature verification is successful then we are sure about the security for the rpm package which
+we downloads or in simple words we can say it checks the license of our RPM package which want to
+install.
+
+Step 5 : verify docker installation ( changes on ur host)
+---------------------------------------------------------
+    $docker --version
+    output:
+    Docker version 19.03.8, build afacb8b
+    
+Step 6 : Start docker services and verify docker bridge is created ( changes on your host)
+------------------------------------------------------------------------------------------
+    $systemctl status docker
+    
+    $systemctl start docker
+    
+Step 7 : List containers
+-------------------------
+    docker ps -a or docker container ps -a
+    
+Step 8 : List images
+--------------------
+    docker images
+    
+Step 8 : Obtain details information about your host
+---------------------------------------------------
+    docker info
+    
+Step 9: To get the list of command used in docker
+-------------------------------------------------
+    docker --help
+    
+    
+By default docker is installed in /var/lib/docker directory.
+------------------------------------------------------------
+    cd var/lib/docker
+    
+After that we can also verify if our docker is running or not with process id, by using command
+ 
+    ps -ef | grep docker
+
