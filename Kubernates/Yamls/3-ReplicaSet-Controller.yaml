@@ -1,4 +1,4 @@
-# nginx-rc.yaml
+# nginx-rs.yaml
 apiVersion: v1
 kind: ReplicaSet
 metadata:
