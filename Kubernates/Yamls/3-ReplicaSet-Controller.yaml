@@ -1,17 +1,20 @@
 # nginx-rc.yaml
 apiVersion: v1
-kind: ReplicationController
+kind: ReplicaSet
 metadata:
-  name: nginx-rc
+  name: nginx-rs
 spec:
   replicas: 3
   selector:
-    app: nginx-app
+    matchLabels:
+      app: nginx-app
+      - {key: tier, operator: In, values: [frontend]}
   template:
     metadata:
       name: nginx-pod
       labels:
         app: nginx-pod
+        tier: frontend
     spec:
       containers:
       - name: nginx-container
