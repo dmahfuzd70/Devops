@@ -1,6 +1,6 @@
-Create Replication Controller
+Create ReplicaSet Controller
 ------------------------------
-    $kubectl create -f nginx-rc.yaml
+    $kubectl create -f nginx-rs.yaml
   
 Get pods information
 --------------------
@@ -8,43 +8,46 @@ Get pods information
     
 How get specific pod when run many pods in cluster
 -------------------------------------------------
-    $kubectl get po -l app=nginx-app
+    $kubectl get po -l tier=frontend
+    
+    $kubectl get rs nginx-rs o wide
 
-
-Details about Replication Controller
+Details about ReplicaSet Controller
 ------------------------------------
-    $kubectl describe rc nginx-rc
+    $kubectl describe rc nginx-rs
     
 
 Use Case
 ---------
 
-Replication Controller - Node Fail
+ReplicaSet Controller - Node Fail
 
     $kubectl get po -o wide
     
     $kubectl get nodes
     
-Replication Controller - Scalling up
+    $kubectl get po -o wide
+    
+ReplicaSet - Scalling up
 
-    $kubectl scale rc nginx-rc --replicas=5
+    $kubectl scale rc nginx-rs --replicas=5
     
-    $kubectl get rc nginx-rc
-    
-    $kubectl get po -o wide
-    
-Replication controller - Scalling down
-    
-    $kubectl scale rc nginx-rc --replicas=3
-    
-    $kubectl get rc nginx-rc
+    $kubectl get rc nginx-rs
     
     $kubectl get po -o wide
     
-Remove Replication Controller
+ReplicaSet - Scalling down
+    
+    $kubectl scale rc nginx-rs --replicas=3
+    
+    $kubectl get rc nginx-rs
+    
+    $kubectl get po -o wide
+    
+Remove ReplicaSet
 -----------------------------
-    $kubectl delete -f nginx-rc.yaml
+    $kubectl delete -f nginx-rs.yaml
     
     $kubectl get rc
     
-    $kubect get po -l app=nginx-app
+    $kubect get po -l tier=nginx-app
