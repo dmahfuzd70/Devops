@@ -1,53 +1,72 @@
-Create ReplicaSet Controller
-------------------------------
-    $kubectl create -f nginx-rs.yaml
+Create Deployment
+-----------------
+    $kubectl create -f 4-Deployment.yaml
   
-Get pods information
---------------------
-    $kubectl get pods
     
-How get specific pod when run many pods in cluster
--------------------------------------------------
-    $kubectl get po -l tier=frontend
+Display Deployment
+------------------
+    $kubectl get deploy -l app=nginx-app   
     
-    $kubectl get rs nginx-rs o wide
+    $kubectl get rs -l app=nginx-app
+    
+Get pod information
+-------------------
+    $kubectl get po -l app=nginx-app
+    
 
-Details about ReplicaSet Controller
+Details about deployment Controller
 ------------------------------------
-    $kubectl describe rc nginx-rs
+    $kubectl describe deploy nginx-deployment
     
 
 Use Case
 ---------
 
-ReplicaSet Controller - Node Fail
+Deployment - Update
+    Useing kubectl set command
+    
+    $kubetctl set image deploy nginx-deployment nginx-container=nginx:1.9.1
+    
+   Using editing command(Editing deployment configuration file in vi editor)
+   
+    $kubectl edit deploy nginx-deployment
+    
+   Deployment - Check status 
+    
+    $kubectl rollout status deployment/nginx-deployment
+    
+    $kubectl get deploy
 
-    $kubectl get po -o wide
-    
-    $kubectl get nodes
-    
-    $kubectl get po -o wide
-    
-ReplicaSet - Scalling up
+Deployment - Rollback
 
-    $kubectl scale rc nginx-rs --replicas=5
+    $kubectl rollout status deployment/nginx-deployment
     
-    $kubectl get rc nginx-rs
+    $kubectl rollout history deployment/nginx-deployment
     
-    $kubectl get po -o wide
+    $kubectl rollout undo deployment/nignx-deployment
     
-ReplicaSet - Scalling down
+    $kubectl rollout status deployment/nginx-deployment
     
-    $kubectl scale rc nginx-rs --replicas=3
     
-    $kubectl get rc nginx-rs
+ Deployment - Scale up
+ 
+    $kubectl scale deployment nginx-deployment --replicas=5
     
-    $kubectl get po -o wide
+    $kubectl get deploy
     
-Remove ReplicaSet
+    $kubectl get po
+    
+ Deployment - Scale down
+    
+    $kubectl scale deployment nginx-deployment --replicas=1
+    
+    $kubectl get deploy
+    
+    $kubectl get po -l app=nginx-app
+    
+Remove Deployment
 -----------------------------
-    $kubectl delete -f nginx-rs.yaml
+    $kubectl delete -f 4-Deployment.yaml
     
-    $kubectl get rc
-    
-    $kubect get po -l tier=nginx-app
+  
+    $kubect get po -l   app=nginx-app
