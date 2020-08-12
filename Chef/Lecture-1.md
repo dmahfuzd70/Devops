@@ -65,6 +65,6 @@ Node
 
 Summary
 
-<img src="/Chef/Images/3.png" alt="Chef Directory" width="700" height="350">
+<img src="/Chef/Images/3.png" alt="Chef Directory" width="600" height="300">
 
-<img src="/Chef/Images/4.png" alt="Chef Directory" width="700" height="350">
+<img src="/Chef/Images/4.png" alt="Chef Directory" width="600" height="300">
