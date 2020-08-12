@@ -34,6 +34,8 @@
 
 <img src="/Chef/Images/1.png" alt="Chef Directory" width="700" height="350">
 
+<img src="/Chef/Images/2.png" alt="Chef Directory" width="700" height="350">
+
 ### Components of Chef
 
 Workstation
