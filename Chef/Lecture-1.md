@@ -63,3 +63,8 @@ Node
     ->Chef-Client is installed on every node.
 
 
+Summary
+
+<img src="/Chef/Images/3.png" alt="Chef Directory" width="700" height="350">
+
+<img src="/Chef/Images/4.png" alt="Chef Directory" width="700" height="350">
