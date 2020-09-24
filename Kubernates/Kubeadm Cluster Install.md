@@ -129,3 +129,15 @@ kubectl get componentstatus or kubectl get cs
 ```
 
 Have Fun!!
+
+
+## Troubleshooting
+
+Problem: [init] Using Kubernetes version: v1.6.5
+[init] Using Authorization mode: RBAC
+[preflight] Running pre-flight checks
+[preflight] Some fatal errors occurred:
+    Port 10251 is in use
+    Port 10252 is in use
+
+Solution: kubeadm reset
