@@ -1,5 +1,5 @@
 # nginx-rs.yaml
-apiVersion: v1
+apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: nginx-rs
@@ -8,6 +8,7 @@ spec:
   selector:
     matchLabels:
       app: nginx-app
+    matchExpressions:  
       - {key: tier, operator: In, values: [frontend]}
   template:
     metadata:
