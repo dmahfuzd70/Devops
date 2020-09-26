@@ -1,4 +1,4 @@
-# nginx-rc.yaml
+# 2-nginx-rc.yaml
 apiVersion: v1
 kind: ReplicationController
 metadata:
