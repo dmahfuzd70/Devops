@@ -10,7 +10,7 @@ Verify the pod is running
     
 Detailes Outpupt
 ----------------
-    $kubectl describe pob nginx-pod
+    $kubectl describe pod nginx-pod
     
 Pod - Testing
 --------------
