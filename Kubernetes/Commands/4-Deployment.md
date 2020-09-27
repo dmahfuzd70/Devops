@@ -66,7 +66,7 @@ Deployment - Rollback
     
 Remove Deployment
 -----------------------------
-    $kubectl delete -f 4-Deployment.yaml
+    $kubectl delete -f nginx-deploy
     
   
     $kubect get po -l   app=nginx-app
