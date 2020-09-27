@@ -43,7 +43,7 @@ Replication controller - Scalling down
     
 Remove Replication Controller
 -----------------------------
-    $kubectl delete -f nginx-rc.yaml
+    $kubectl delete -f nginx-rc
     
     $kubectl get rc
     
