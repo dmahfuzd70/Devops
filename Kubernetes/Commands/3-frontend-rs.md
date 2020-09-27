@@ -1,6 +1,6 @@
 Create ReplicaSet Controller
 ------------------------------
-    $kubectl create -f nginx-rs.yaml
+    $kubectl create -f 3-frontend-rs.yaml
   
 Get pods information
 --------------------
@@ -10,11 +10,11 @@ How get specific pod when run many pods in cluster
 -------------------------------------------------
     $kubectl get po -l tier=frontend
     
-    $kubectl get rs nginx-rs o wide
+    $kubectl get rs frontend o wide
 
 Details about ReplicaSet Controller
 ------------------------------------
-    $kubectl describe rc nginx-rs
+    $kubectl describe rc frontend
     
 
 Use Case
@@ -30,24 +30,24 @@ ReplicaSet Controller - Node Fail
     
 ReplicaSet - Scalling up
 
-    $kubectl scale rc nginx-rs --replicas=5
+    $kubectl scale rs frontend --replicas=5
     
-    $kubectl get rc nginx-rs
+    $kubectl get rs frontend
     
     $kubectl get po -o wide
     
 ReplicaSet - Scalling down
     
-    $kubectl scale rc nginx-rs --replicas=3
+    $kubectl scale rc frontend --replicas=3
     
-    $kubectl get rc nginx-rs
+    $kubectl get rc frontend
     
     $kubectl get po -o wide
     
 Remove ReplicaSet
 -----------------------------
-    $kubectl delete -f nginx-rs.yaml
+    $kubectl delete -f 3-frontend-rs.yaml
     
     $kubectl get rc
     
-    $kubect get po -l tier=nginx-app
+    $kubect get po -l tier=frontend
