@@ -46,7 +46,7 @@ ReplicaSet - Scalling down
     
 Remove ReplicaSet
 -----------------------------
-    $kubectl delete -f 3-frontend-rs.yaml
+    $kubectl delete -f frontend
     
     $kubectl get rc
     
