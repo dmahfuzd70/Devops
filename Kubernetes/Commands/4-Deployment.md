@@ -23,7 +23,7 @@ Use Case
 ---------
 
 Deployment - Update
-    Useing kubectl set command
+    Using kubectl set command
     
     $kubetctl set image deploy nginx-deployment nginx-container=nginx:1.9.1
     
