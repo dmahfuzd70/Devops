@@ -26,4 +26,4 @@ Inside the pod
     
 Delete the pod
 --------------
-    $kubectl delete pod 1-nginx-pod.yaml
+    $kubectl delete pod nginx-pod
