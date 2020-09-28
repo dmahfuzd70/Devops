@@ -11,6 +11,6 @@ spec:
     app: nginx-app
   type: NodePort  
   ports:
-    - nodePort: 3100 
+    - nodePort: 31000 
       port: 80
       targetPort: 80
