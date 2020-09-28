@@ -1,11 +1,16 @@
+# Service
+# 5-nodeport-service.yaml
 apiVersion: v1
 kind: Service
 metadata:
   name: my-service
+  labels:
+    app: nginx-app    
 spec:
   selector:
-    app: MyApp
+    app: nginx-app
+  type: NodePort  
   ports:
-    - protocol: TCP
+    - nodePort: 3100 
       port: 80
-      targetPort: 9376
+      targetPort: 80
