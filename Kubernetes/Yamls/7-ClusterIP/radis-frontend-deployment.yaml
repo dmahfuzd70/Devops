@@ -1,4 +1,4 @@
-# controllers/4-deployment.yaml
+# radis-frontend-deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
