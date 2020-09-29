@@ -1,5 +1,5 @@
 # Deployment
-# controllers/4-deployment.yaml
+# redis-master-deployment
 apiVersion: apps/v1
 kind: Deployment
 metadata:
