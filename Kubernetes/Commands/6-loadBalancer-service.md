@@ -1,5 +1,5 @@
-Create & Display
-----------------
+Create 
+------
     kubectl create -f 4-deployment.yaml
     
     kubectl create -f 6-loadBalancer-service.yaml
@@ -8,9 +8,8 @@ Create & Display
    
  Display
  -------
-    kubectl get service -l app=ginx-app
-    
     kubectl describe service my-service
+    
     
 Accessing using LoadBalancer IP
 -------------------------------
