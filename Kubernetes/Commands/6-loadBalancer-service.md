@@ -2,7 +2,7 @@ Create & Display
 ----------------
     kubectl create -f 4-deployment.yaml
     
-    kubectl create -f 6-loadbalancer-service.yaml
+    kubectl create -f 6-loadBalancer-service.yaml
     
     kubectl get service -l app=nginx-app
    
