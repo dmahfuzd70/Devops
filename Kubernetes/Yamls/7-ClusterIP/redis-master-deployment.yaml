@@ -10,7 +10,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx-app
+      app: redis
       role: master
       tier: backend
   template:
