@@ -1,19 +1,16 @@
 # Service
-# 5-nodeport-service.yaml
+# radis-slave-service.yaml
 apiVersion: v1
 kind: Service
 metadata:
-  name: redis-master-svc
+  name: frontend-svc
   labels:
-    app: nginx-app
-    role: master
-    tier: backend
+    app: guestbook
+    tier: frontend
 spec:
+  type: NodePort
   ports:
-  - port: 6379
-    targetPort: 6379
-  type: ClusterIP  
+  - port: 80
   selector:
-    app: redis 
-    role: master
-    tier: backend
+    app: guestbook 
+    tier: frontend
