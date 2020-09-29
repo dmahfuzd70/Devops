@@ -1,0 +1,19 @@
+# Service
+# 5-nodeport-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis-master-svc
+  labels:
+    app: nginx-app
+    role: master
+    tier: backend
+spec:
+  ports:
+  - port: 6379
+    targetPort: 6379
+  type: ClusterIP  
+  selector:
+    app: redis 
+    role: master
+    tier: backend
