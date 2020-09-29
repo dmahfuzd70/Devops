@@ -1,4 +1,4 @@
-# redis-master-deployment
+# radis-master-deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
