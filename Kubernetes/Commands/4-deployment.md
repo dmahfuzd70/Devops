@@ -25,7 +25,7 @@ Use Case
 Deployment - Update
     Using kubectl set command
     
-    $kubetctl set image deploy nginx-deployment nginx-container=nginx:1.9.1
+    $kubetctl set image deploy nginx-deployment nginx-container=nginx:1.19.2
     
    Using editing command(Editing deployment configuration file in vi editor)
    
