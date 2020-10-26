@@ -26,3 +26,12 @@ Reload ~/.bashrc
 Verify
 
     mvn --version
+
+
+GIT Installation
+----------------
+
+    [ec2-user@ip-172-31-64-105 ~]$ sudo yum install git -y
+    
+Verify
+    git --version
