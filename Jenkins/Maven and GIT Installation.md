@@ -4,7 +4,7 @@ Maven Installation
 Step-1
 
     [ec2-user@ip-172-31-64-105 ~]$ cd /opt
-    [ec2-user@ip-172-31-64-105 ~]$ sudo wget download-link
+    [ec2-user@ip-172-31-64-105 ~]$ sudo wget https://downloads.apache.org/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip
 
     [ec2-user@ip-172-31-64-105 ~]$ sudo unzip apache-maven-3.5.3-bin.zip
     [ec2-user@ip-172-31-64-105 ~]$ sudo rm -rf apache-mahven-3.5.3-bin.zip
