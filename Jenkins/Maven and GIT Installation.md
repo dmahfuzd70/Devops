@@ -12,6 +12,8 @@ Step-1
 Step-2
 
 [ec2-user@ip-172-31-64-105 ~]$ vi ~/.bashrc
+    
+    export PATH=/opt/maven3/bin:$PATH
 
     export M2_HOME=/opt/apache-maven-3.6.3
     
