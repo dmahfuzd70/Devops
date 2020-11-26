@@ -15,11 +15,12 @@ Step-2
     
     export PATH=/opt/maven3/bin:$PATH
 
-    export M2_HOME=/opt/apache-maven-3.6.3
     
-    export M2=$m2_HOME/bin
+    export M2_HOME=/opt/maven3
+    
+    export M2=$M2_HOME/bin
 
-    export PATH=$m2:$PATH
+    export PATH=$M2:$PATH
 
 Reload ~/.bashrc
 
