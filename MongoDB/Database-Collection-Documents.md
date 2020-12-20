@@ -30,8 +30,9 @@ https://docs.mongodb.com/manual/installation/
 
 -> db.movies.insert
 
--> db.movies.insert(
-    {
+   -> db.movies.insert(
+  
+     {
       "title": "The Matrix",
        "released: 1999"
      }
@@ -45,7 +46,7 @@ https://docs.mongodb.com/manual/installation/
 
 -> db.movies.find().pretty()
 
--> db.movies.insert(
+    -> db.movies.insert(
 	{
          "title": "Avatar",
          "released": 2009,
@@ -55,7 +56,7 @@ https://docs.mongodb.com/manual/installation/
       )
 -> db.movies.find().pretty()
 
--> db.movies.insert(
+    -> db.movies.insert(
 	{
          "title": "Jeans",
          "released": 1998,
@@ -78,19 +79,19 @@ https://docs.mongodb.com/manual/installation/
    
 -> db.movies.find().pretty()
 
--> db.movies.update(
-    {"title": "The Matrix"}, 
-    {$set: {"language: "English"}}
+     -> db.movies.update(
+        {"title": "The Matrix"}, 
+         {$set: {"language: "English"}}
      )
 
--> db.movies.update(
-    {"title": "The Matrix"}, 
-    {$unset: {"language: ""}}
+     -> db.movies.update(
+         {"title": "The Matrix"}, 
+       {$unset: {"language: ""}}
      )
 
--> db.movies.update(
-    {"title": "The Matrix"}, 
-    {$set: {"language: "korean"}}
+    -> db.movies.update(
+        {"title": "The Matrix"}, 
+      {$set: {"language: "korean"}}
      )
 
 -> db.movies.find().pretty()
