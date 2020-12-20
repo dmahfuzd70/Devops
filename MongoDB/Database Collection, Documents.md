@@ -1,0 +1,132 @@
+https://docs.mongodb.com/manual/installation/
+
+-> show dbs
+
+-> db
+
+-> use mytestdb
+
+-> show dbs
+
+-> show collections
+
+-> db.createCollection("movies")
+
+-> show collections
+
+-> show dbs
+
+-> db
+
+-> db.stats()
+
+-> db.movies.drop
+
+-> db.movies.drop()
+
+-> show collections
+
+-> show dbs
+
+-> db.movies.insert
+
+-> db.movies.insert(
+    {
+      "title": "The Matrix",
+       "released: 1999"
+     }
+    )
+
+-> show collections
+
+-> show dbs
+
+-> db.movies.find()
+
+-> db.movies.find().pretty()
+
+-> db.movies.insert(
+	{
+         "title": "Avatar",
+         "released": 2009,
+	 "language": "English",
+	 "director": "James Cameron"
+       }
+      )
+-> db.movies.find().pretty()
+
+-> db.movies.insert(
+	{
+         "title": "Jeans",
+         "released": 1998,
+	 "language": "Tamil",
+	 "director": "Shankar"
+	 "cast": ["Prashanth, "Aisharya Rai"],
+	 "reviews": [
+		{
+		  "reviewer": "Alice",
+ 		  "review": "Great movie to watch"
+		},
+                {
+		  "reviwer": "Bob",
+		  "review": "What a waste of time"
+                }
+		
+		] 
+       }
+      ) 
+   
+-> db.movies.find().pretty()
+
+-> db.movies.update(
+    {"title": "The Matrix"}, 
+    {$set: {"language: "English"}}
+     )
+
+-> db.movies.update(
+    {"title": "The Matrix"}, 
+    {$unset: {"language: ""}}
+     )
+
+-> db.movies.update(
+    {"title": "The Matrix"}, 
+    {$set: {"language: "korean"}}
+     )
+
+-> db.movies.find().pretty()
+
+-> db.movies.find({"released": 1999}).pretty()
+
+-> db.movies.find({"director": "Shankar"}).pretty()
+
+-> db.movies.find({"released": {$gt: 2000}}).pretty()
+
+-> db.movies.find({"released": {$lt: 2000}}).pretty()
+
+-> db.movies.find({}, {"_id": 0}).pretty()
+
+-> db.movies.find({}, {"_id": 0, "title": 1, "released": 1, "language": 1}).pretty()
+
+-> db.movies.count()
+
+-> db.movies.stats()
+
+-> db.movies.count({"released": {$gt: 2000}}) 
+
+-> db.movies.count({"released": {$lt: 2000}}).pretty()
+
+-> db.movies.count({"language": "English"}) 
+
+-> db.movies.delete
+
+-> db.movies.deleteMany({"language": "Tamil"})
+
+-> db.movies.find().pretty()
+
+-> db.movies.deleteMany({})
+
+-> db.movies.drop()
+
+-> show collections
+
+-> db.dropDatabase()
