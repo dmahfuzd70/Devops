@@ -4,7 +4,7 @@ kind: Pod
 metadata:
  name: redis-hostpath
 spec:
- containters:
+ containers:
       - name: redis-container
         image: redis
         volumeMounts:
