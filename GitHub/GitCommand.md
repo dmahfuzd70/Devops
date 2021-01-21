@@ -1,9 +1,13 @@
+Git Initialization
+..................
 MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1
 
     $ git init
 
     Initialized empty Git repository in C:/Users/MAHFUZUR RAHMAN/Desktop/Devops/GitHub/Project-1/.git/
 
+Set Username and Email
+......................
 MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
 
     $ git config --global user.name "Mahfuzur Rahman"
@@ -12,6 +16,7 @@ MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (maste
 
     $ git config --global user.email "dmahfuzd@gmail.com"
 
+#Check User Information
 MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
 
     $ git config --list
@@ -56,13 +61,18 @@ MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (maste
 
     nothing added to commit but untracked files present (use "git add" to track)
 
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
-$
+Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    
+    $ touch cold.txt hot.txt
 
+Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+
+    $ ls
+    cold.txt  hot.txtt
 
 MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
  
-       $ git add cold.txt
+    $ git add cold.txt
 
 MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
 
