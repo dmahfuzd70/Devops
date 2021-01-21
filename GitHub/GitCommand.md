@@ -1,12 +1,12 @@
-Git Initialization
-..................
+## Git Initialization
+
 MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1
 
     $ git init
 
     Initialized empty Git repository in C:/Users/MAHFUZUR RAHMAN/Desktop/Devops/GitHub/Project-1/.git/
 
-Set Username and Email
+## Set Username and Email
 ......................
 MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
 
@@ -16,7 +16,7 @@ MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (maste
 
     $ git config --global user.email "dmahfuzd@gmail.com"
 
-#Check User Information
+# Check User Information
 MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
 
     $ git config --list
