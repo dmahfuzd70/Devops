@@ -47,7 +47,7 @@
     $ ls
     cold.txt  hot.txtt
 
-## Check Status
+## Check Status(Unstage File)
     Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
     $ git status
     On branch master
@@ -58,81 +58,159 @@
       (use "git add <file>..." to include in what will be committed)
             cold.txt
             hot.txt
+    nothing added to commit but untracked files present (use "git add" to track)
 
-nothing added to commit but untracked files present (use "git add" to track)
-
-
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
-
-
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
+## File Staging
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    $ git add cold.txt
     
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    $ git status
+    On branch master
+
+    No commits yet
+
+    Changes to be committed:
+      (use "git rm --cached <file>..." to unstage)
+            new file:   cold.txt
+
+    Untracked files:
+      (use "git add <file>..." to include in what will be committed)
+            hot.txt
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    $ git add . 
+    
+    MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
     $ git add --all
 
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    $ git status
+    On branch master
 
-    $ git add .
+    No commits yet
 
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
-$
+    Changes to be committed:
+      (use "git rm --cached <file>..." to unstage)
+            new file:   cold.txt
+            new file:   hot.txt
 
-  
+## Git Commit
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
     $ git commit
+    
+    2 text file added
+    # Please enter the commit message for your changes. Lines starting
+    # with '#' will be ignored, and an empty message aborts the commit.
+    #
+    # On branch master
+    #
+    # Initial commit
+    #
+    # Changes to be committed:
+    #       new file:   cold.txt
+    #       new file:   hot.txt
+    #
+    ~
+    ~
+    ~
+    ~
+    ~
 
+    Note: Open a file in editor mode
+    
+    [master (root-commit) ed2675a] 2 file added
+    2 files changed, 0 insertions(+), 0 deletions(-)
+    create mode 100644 cold.txt
+    create mode 100644 hot.txt
+     
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    $ git status
+    On branch master
+    nothing to commit, working tree clean
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    $ touch chocolate.txt
+    
+    $ git status
+    On branch master
+    Untracked files:
+      (use "git add <file>..." to include in what will be committed)
+            chocolate.txt
+            
+     Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+     $ git add .
+     
+     $ git commit -m "chocolate added"
+    [master 74794d4] chocolate added
+     1 file changed, 0 insertions(+), 0 deletions(-)
+     create mode 100644 chocolate.txt
+     
+     $ git status
+    On branch master
+    nothing to commit, working tree clean
 
-    [master (root-commit) 5b41351] Two text file added
-     2 files changed, 0 insertions(+), 0 deletions(-)
-     create mode 100644 cold.txt
-     create mode 100644 hot.txt
+## To check commit status by git log command
+    $ git log
+    commit 74794d476ffd4ad25b3b701b7e5dfe1286c4ade4 (HEAD -> master)
+    Author: Mahfuzur Rahman <dmahfuzd@gmail.com>
+    Date:   Thu Jan 21 21:58:06 2021 +0600
 
+        chocolate added
 
+    commit ed2675aa48c6d39d537993489588fe888efa4d40
+    Author: Mahfuzur Rahman <dmahfuzd@gmail.com>
+    Date:   Thu Jan 21 21:53:00 2021 +0600
 
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
+        2 file added
+        
+    $ git log --oneline
+    74794d4 (HEAD -> master) chocolate added
+    ed2675a 2 file added   
 
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    $ echo "ice cube added" >> cold.txt
+    
+    $ git status
+    On branch master
+    Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git restore <file>..." to discard changes in working directory)
+            modified:   cold.txt
+
+    no changes added to commit (use "git add" and/or "git commit -a")
+    
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    $ git add .
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
     $ git status
     On branch master
     Changes to be committed:
       (use "git restore --staged <file>..." to unstage)
-            new file:   chocolate.txt
-
-
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
-
-    $ git commit -m "Chocolate added"
-    [master d361a8b] Chocolate added
-     1 file changed, 0 insertions(+), 0 deletions(-)
-     create mode 100644 chocolate.txt
-
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
-$
-
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
-
-    $ git log
-    commit d361a8b4458ef80ceb0f32eb7aa2d33cc558f4b2 (HEAD -> master)
-    Author: Mahfuzur Rahman <dmahfuzd@gmail.com>
-    Date:   Sat Sep 5 19:20:00 2020 +0600
-
-    Chocolate added
-
-    commit 5b41351f09ae34ef64018d439635745a96ef05fb
-    Author: Mahfuzur Rahman <dmahfuzd@gmail.com>
-    Date:   Sat Sep 5 19:15:31 2020 +0600
-
-    Two text file added
-
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
-
+            modified:   cold.txt
+            
+     Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    $ git commit -m "ice cube added"
+    [master 75a62a0] ice cube added
+     1 file changed, 1 insertion(+)
+     
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    $ git status
+    On branch master
+    nothing to commit, working tree clean
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
     $ git log --oneline
-    d361a8b (HEAD -> master) Chocolate added
-    5b41351 Two text file added
+    75a62a0 (HEAD -> master) ice cube added
+    74794d4 chocolate added
+    ed2675a 2 file added
 
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
-$
-
-
-    $ git checkout d361a8b
-    Note: switching to 'd361a8b'.
+## Back previous Stage by checkout command
+    $ git checkout 74794d4
+    Note: switching to '74794d4'.
 
     You are in 'detached HEAD' state. You can look around, make experimental
     changes and commit them, and you can discard any commits you make in this
@@ -149,27 +227,52 @@ $
 
     Turn off this advice by setting config variable advice.detachedHead to false
 
-    HEAD is now at d361a8b Chocolate added
+    HEAD is now at 74794d4 chocolate added
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub ((74794d4...))
+    $ cat cold.txt
 
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub ((74794d4...))
+    $ git log --oneline
+    74794d4 (HEAD) chocolate added
+    ed2675a 2 file added
 
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 ((d361a8b...))
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub ((74794d4...))
+    $ git checkout ed2675a
+    Previous HEAD position was 74794d4 chocolate added
+    HEAD is now at ed2675a 2 file added
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub ((ed2675a...))
+    $ ls
+    cold.txt  hot.txt
 
-    $ git status
-    HEAD detached at d361a8b
-    nothing to commit, working tree clean
-
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 ((d361a8b...))
-
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub ((ed2675a...))
     $ git checkout master
-    Previous HEAD position was d361a8b Chocolate added
+    Previous HEAD position was ed2675a 2 file added
     Switched to branch 'master'
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    $ ls
+    chocolate.txt  cold.txt  hot.txt
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    $ cat cold.txt
+    ice cube added
+    
+    
+ ## To check latest change in last commit by git diff command
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    $ ls
+    chocolate.txt  cold.txt  hot.txt
 
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
-$
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    $ echo "some chocolate added" >> chocolate.txt
 
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    $ cat chocolate.txt
+    some chocolate added
 
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
-
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
     $ git status
     On branch master
     Changes not staged for commit:
@@ -178,77 +281,140 @@ MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (maste
             modified:   chocolate.txt
 
     no changes added to commit (use "git add" and/or "git commit -a")
-
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
-
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
     $ git diff
+    warning: LF will be replaced by CRLF in chocolate.txt.
+    The file will have its original line endings in your working directory
     diff --git a/chocolate.txt b/chocolate.txt
-    index e69de29..82f6c81 100644
+    index e69de29..5ff6b14 100644
     --- a/chocolate.txt
     +++ b/chocolate.txt
     @@ -0,0 +1 @@
-    +Some Chocolate added.
-    \ No newline at end of file
-
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
-
-
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
-
+    +some chocolate added
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
     $ git log --oneline
-    7367e81 (HEAD -> master) ice cube added
-    d361a8b Chocolate added
-    5b41351 Two text file added
-
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
-
-    $ git show d361a8b
-    commit d361a8b4458ef80ceb0f32eb7aa2d33cc558f4b2
+    75a62a0 (HEAD -> master) ice cube added
+    74794d4 chocolate added
+    ed2675a 2 file added
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    $ git show 74794d4
+    commit 74794d476ffd4ad25b3b701b7e5dfe1286c4ade4
     Author: Mahfuzur Rahman <dmahfuzd@gmail.com>
-    Date:   Sat Sep 5 19:20:00 2020 +0600
+    Date:   Thu Jan 21 21:58:06 2021 +0600
 
-        Chocolate added
+        chocolate added
 
     diff --git a/chocolate.txt b/chocolate.txt
     new file mode 100644
     index 0000000..e69de29
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    $ git add .
 
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    $ git commit -m "some chocolate added"
+    [master 5123b9a] some chocolate added
+     1 file changed, 1 insertion(+)
+     
+    5123b9a (HEAD -> master) some chocolate added
+    75a62a0 ice cube added
+    74794d4 chocolate added 
+    ed2675a 2 file added
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    $ echo "dark chocolate added" >> chocolate.txt
 
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    $ cat chocolate.txt
+    some chocolate added
+    dark chocolate added
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    $ git add .
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    $ git commit -m "dark chocolate added"
+    [master 34f3045] dark chocolate added
+     1 file changed, 1 insertion(+)
 
-    MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
     $ git log --oneline
-    ce7ce00 (HEAD -> master) Dark Chocolate added
-    bf94956 Some chocolate added
-    7367e81 ice cube added
-    d361a8b Chocolate added
-    5b41351 Two text file added
-
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
-
-    $ git diff bf94956 ce7ce00
+    34f3045 (HEAD -> master) dark chocolate added
+    5123b9a some chocolate added
+    75a62a0 ice cube added
+    74794d4 chocolate added
+    ed2675a 2 file added
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    $ git diff 5123b9a 34f3045
     diff --git a/chocolate.txt b/chocolate.txt
-    index 82f6c81..5c9e65f 100644
+    index 5ff6b14..58d185c 100644
     --- a/chocolate.txt
     +++ b/chocolate.txt
-    @@ -1 +1,3 @@
-    -Some Chocolate added.
-    \ No newline at end of file
-    +Some Chocolate added.
-    +
-    +Dark Chocolate added.
-    \ No newline at end of file
+    @@ -1 +1,2 @@
+     some chocolate added
+    +dark chocolate added
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    $ echo "more chocolate added" >> chocolate.txt
 
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
-$
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    $ cat chocolate.txt
+    some chocolate added
+    dark chocolate added
+    more chocolate added
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    $ git status
+    On branch master
+    Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git restore <file>..." to discard changes in working directory)
+            modified:   chocolate.txt
 
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
+    no changes added to commit (use "git add" and/or "git commit -a")
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    $ git diff
+    warning: LF will be replaced by CRLF in chocolate.txt.
+    The file will have its original line endings in your working directory
+    diff --git a/chocolate.txt b/chocolate.txt
+    index 58d185c..2d15806 100644
+    --- a/chocolate.txt
+    +++ b/chocolate.txt
+    @@ -1,2 +1,3 @@
+     some chocolate added
+     dark chocolate added
+    +more chocolate added
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    $ git add .
 
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    $ git diff
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    $ git diff --staged
+    diff --git a/chocolate.txt b/chocolate.txt
+    index 58d185c..2d15806 100644
+    --- a/chocolate.txt
+    +++ b/chocolate.txt
+    @@ -1,2 +1,3 @@
+     some chocolate added
+     dark chocolate added
+    +more chocolate added
+    
+    
+ ## File delete
+ 
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
     $ git rm hot.txt
     rm 'hot.txt'
 
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
-
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
     $ git status
     On branch master
     Changes to be committed:
@@ -257,12 +423,12 @@ MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (maste
             deleted:    hot.txt
 
 
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    $ git reset HEAD hot.txt
+    Unstaged changes after reset:
+    D       hot.txt
 
-    $ git restore --staged hot.txt
-
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
-
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
     $ git status
     On branch master
     Changes to be committed:
@@ -273,52 +439,34 @@ MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (maste
       (use "git add/rm <file>..." to update what will be committed)
       (use "git restore <file>..." to discard changes in working directory)
             deleted:    hot.txt
-
-
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
-$
-
-
-
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
-
-    $ git remote add origin https://github.com/dmahfuzd70/Practice
-
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
-
-    $ git push -u origin master
-    To https://github.com/dmahfuzd70/Practice
-     ! [rejected]        master -> master (fetch first)
-    error: failed to push some refs to 'https://github.com/dmahfuzd70/Practice'
-    hint: Updates were rejected because the remote contains work that you do
-    hint: not have locally. This is usually caused by another repository pushing
-    hint: to the same ref. You may want to first integrate the remote changes
-    hint: (e.g., 'git pull ...') before pushing again.
-    hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
-
-    $ git remote add origin https://github.com/dmahfuzd70/Practice.git
-    fatal: remote origin already exists.
-
-
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
-
-    $ git push -u origin master -force
-    error: did you mean `--force` (with two dashes)?
-
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
-
-    $ git push -u origin master --force
-    Enumerating objects: 7, done.
-    Counting objects: 100% (7/7), done.
+            
+     Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+    $ git commit -m "hot text deleted"
+    [master 20df374] hot text deleted
+     1 file changed, 1 insertion(+)
+     
+ ## Local Repository connect with Remote Repository
+     First create remote Repository in github.
+     
+     Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+     $ git remote add origin https://github.com/dmahfuzd70/Coffee.git
+     
+     Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
+     $ git push -u origin master
+     
+     Note: Login prompt will be appear
+     
+     Enumerating objects: 17, done.
+    Counting objects: 100% (17/17), done.
     Delta compression using up to 4 threads
-    Compressing objects: 100% (5/5), done.
-    Writing objects: 100% (7/7), 677 bytes | 61.00 KiB/s, done.
-    Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
-    To https://github.com/dmahfuzd70/Practice
-     + 4e52d67...9261dad master -> master (forced update)
+    Compressing objects: 100% (13/13), done.
+    Writing objects: 100% (17/17), 1.55 KiB | 317.00 KiB/s, done.
+    Total 17 (delta 1), reused 0 (delta 0), pack-reused 0
+    remote: Resolving deltas: 100% (1/1), done.
+    To https://github.com/dmahfuzd70/Coffee.git
+     * [new branch]      master -> master
     Branch 'master' set up to track remote branch 'master' from 'origin'.
 
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
-
+    
+    
+    
