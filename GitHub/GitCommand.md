@@ -1,25 +1,21 @@
 ## Git Initialization
 
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1
-
+    MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1
     $ git init
-
     Initialized empty Git repository in C:/Users/MAHFUZUR RAHMAN/Desktop/Devops/GitHub/Project-1/.git/
 
 ## Set Username and Email
-......................
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
 
+    MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
     $ git config --global user.name "Mahfuzur Rahman"
 
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
+    MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
 
     $ git config --global user.email "dmahfuzd@gmail.com"
 
-# Check User Information
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
-
-    $ git config --list
+## Check User Information
+    MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
+     $ git config --list
 
     diff.astextplain.textconv=astextplain
     filter.lfs.clean=git-lfs clean -- %f
@@ -42,52 +38,28 @@ MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (maste
     core.symlinks=false
     core.ignorecase=truegit
 
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
-$
-
-
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
-    
-    $ git status
-    
-    On branch master
-
-    No commits yet
-
-    Untracked files:
-    (use "git add <file>..." to include in what will be committed)
-        cold.txt
-        hot.txt
-
-    nothing added to commit but untracked files present (use "git add" to track)
-
-Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
-    
+## Create two file
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
     $ touch cold.txt hot.txt
 
-Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
-
+## Check file
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
     $ ls
     cold.txt  hot.txtt
 
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
- 
-    $ git add cold.txt
-
-MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
-
+## Check Status
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/DevOps/GitHub (master)
     $ git status
     On branch master
 
     No commits yet
 
-    Changes to be committed:
-      (use "git rm --cached <file>..." to unstage)
-            new file:   cold.txt
-
     Untracked files:
       (use "git add <file>..." to include in what will be committed)
+            cold.txt
             hot.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
 
 
 MAHFUZUR RAHMAN@DESKTOP-4Q0OEE3 MINGW64 ~/Desktop/Devops/GitHub/Project-1 (master)
