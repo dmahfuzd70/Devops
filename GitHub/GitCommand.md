@@ -466,7 +466,99 @@
     To https://github.com/dmahfuzd70/Coffee.git
      * [new branch]      master -> master
     Branch 'master' set up to track remote branch 'master' from 'origin'.
-
     
+    
+ ## Local Repository connect with remote Repository by SSH Key
+    Note: First remove login credential from windows to search credential in start bar search box.
+    
+    Make a directory name is git tuto then it initialize as a git directory
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/GitHub
+    $ git init
+    Initialized empty Git repository in C:/Users/Mahfazur Rahman/Desktop/GitHub/.git/
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/GitHub (master)
+    $ touch student.txt
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/GitHub (master)
+    $ git status
+    On branch master
+
+    No commits yet
+
+    Untracked files:
+      (use "git add <file>..." to include in what will be committed)
+            student.txt
+
+    nothing added to commit but untracked files present (use "git add" to track)
+    
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/GitHub (master)
+    $ git add .
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/GitHub (master)
+    $ git commit -m "commit student"
+    [master (root-commit) c74747a] commit student
+     1 file changed, 0 insertions(+), 0 deletions(-)
+     create mode 100644 student.txt
+     
+     Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/GitHub (master)
+    $ ssh-keygen -t rsa -b 4096 -C "dmahfuzd@gmail.com"
+    Generating public/private rsa key pair.
+    Enter file in which to save the key (/c/Users/Mahfazur Rahman/.ssh/id_rsa):
+    Enter passphrase (empty for no passphrase):
+    Enter same passphrase again:
+    Your identification has been saved in /c/Users/Mahfazur Rahman/.ssh/id_rsa
+    Your public key has been saved in /c/Users/Mahfazur Rahman/.ssh/id_rsa.pub
+    The key fingerprint is:
+    SHA256:7draHMyNlnENa5Eh+74+JUcJ980tq7Fo6G+sNTghpx4 dmahfuzd@gmail.com
+    The key's randomart image is:
+    +---[RSA 4096]----+
+    |          . .    |
+    |           o.o.  |
+    |          . +o +o|
+    |         . . =+ =|
+    |      . S o =..o |
+    |       + * Oo +  |
+    |      E oo@.oB   |
+    |     . ..O=o+.   |
+    |      ..=*=.o.   |
+    +----[SHA256]-----+
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/GitHub (master)
+    $ eval $(ssh-agent -s)
+    Agent pid 913
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/GitHub (master)
+    $ ssh-add ~/.ssh/id_rsa
+    Identity added: /c/Users/Mahfazur Rahman/.ssh/id_rsa (dmahfuzd@gmail.com)
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/GitHub (master)
+    $ clip < ~/.ssh/id_rsa.pub
+    
+    Note: Copy public key for add with Remote Repository
+    Go Remote Repository Setting > SSH and GPG Keys 
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/GitHub (master)
+    $ git remote add origin git@github.com:dmahfuzd70/git-tuto.git
+
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/GitHub (master)
+    $ git push -u origin master
+    The authenticity of host 'github.com (52.74.223.119)' can't be established.
+    RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+    Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+    Warning: Permanently added 'github.com,52.74.223.119' (RSA) to the list of known hosts.
+    Enumerating objects: 3, done.
+    Counting objects: 100% (3/3), done.
+    Writing objects: 100% (3/3), 219 bytes | 43.00 KiB/s, done.
+    Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+    To github.com:dmahfuzd70/git-tuto.git
+     * [new branch]      master -> master
+    Branch 'master' set up to track remote branch 'master' from 'origin'.
+    
+    
+    ## Download project from Remote Repository(clone, fetch, pull)
+    
+        
     
     
