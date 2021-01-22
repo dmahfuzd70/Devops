@@ -557,8 +557,59 @@
     Branch 'master' set up to track remote branch 'master' from 'origin'.
     
     
-    ## Download project from Remote Repository(clone, fetch, pull)
+## Download project from Remote Repository(clone, fetch, pull)
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/GitHub (master)
+    $ git clone git@github.com:dmahfuzd70/git-tuto.git
+    Cloning into 'git-tuto'...
+    Warning: Permanently added the RSA host key for IP address '13.229.188.59' to the list of known hosts.
+    remote: Enumerating objects: 3, done.
+    remote: Counting objects: 100% (3/3), done.
+    remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+    Receiving objects: 100% (3/3), done.
     
+    $ git clone git@github.com:dmahfuzd70/git-tuto.git new-git(If want new name)
+    
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/GitHub (master)
+    $ git clone git@github.com:dmahfuzd70/git-tuto.git new-git
+    Cloning into 'new-git'...
+    remote: Enumerating objects: 3, done.
+    remote: Counting objects: 100% (3/3), done.
+    remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+    Receiving objects: 100% (3/3), done.
+    
+    $ git status
+    On branch master
+    Your branch is up to date with 'origin/master'.
+
+    Changes not staged for commit:
+      (use "git add/rm <file>..." to update what will be committed)
+      (use "git restore <file>..." to discard changes in working directory)
+            deleted:    student.txt
+
+    Untracked files:
+      (use "git add <file>..." to include in what will be committed)
+            git-tuto/
+            new-git/
+
+    no changes added to commit (use "git add" and/or "git commit -a")
+
+    Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/GitHub (master)
+    $ git fetch
+    remote: Enumerating objects: 5, done.
+    remote: Counting objects: 100% (5/5), done.
+    remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+    Unpacking objects: 100% (3/3), 652 bytes | 3.00 KiB/s, done.
+    From github.com:dmahfuzd70/git-tuto
+       c74747a..e3b84cf  master     -> origin/master
+       
+       
+       
+     Mahfazur Rahman@MAHFUZ MINGW64 ~/Desktop/GitHub (master)
+    $ git pull
+    Updating c74747a..e3b84cf
+    Fast-forward
+     student.txt | 1 +
+     1 file changed, 1 insertion(+)
         
     
     
