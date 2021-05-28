@@ -15,6 +15,8 @@ Install and Configure Ansible
               :x (save and exit)
        
        Step-3: Make sure that PasswordAuthentication yes in all servers under /etc/ssh/sshd_config file.
+               Restart service sshd following command:
+               sudo service sshd restart
                
        Step-4: Generate ssh-keys using ssh-keygen command from ansadmin.
                [root@hostX .ssh]# ssh-keygen  ; (Enter 3 Times)
