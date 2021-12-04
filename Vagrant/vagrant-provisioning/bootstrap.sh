@@ -50,12 +50,12 @@ echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config
 systemctl reload sshd
 
 echo "[TASK 9] Set root password"
-echo -e "kubeadmin\nkubeadmin" | passwd root >/dev/null 2>&1
+echo -e "kubeadmin" | passwd root >/dev/null 2>&1
 echo "export TERM=xterm" >> /etc/bash.bashrc
 
 echo "[TASK 10] Update /etc/hosts file"
 cat >>/etc/hosts<<EOF
-172.16.16.100   kmaster.example.com     kmaster
-172.16.16.101   kworker1.example.com    kworker1
-172.16.16.102   kworker2.example.com    kworker2
+192.168.0.110   kmaster.example.com     kmaster
+192.168.0.111   kworker1.example.com    kworker1
+192.168.0.112   kworker2.example.com    kworker2
 EOF
